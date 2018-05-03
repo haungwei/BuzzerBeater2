@@ -1,4 +1,7 @@
-package eeit97.buzzerbeater.jpa.entity;
+package eeit97.buzzerbeater.jpa.entity.compositeid;
+
+import eeit97.buzzerbeater.jpa.entity.Games;
+import eeit97.buzzerbeater.jpa.entity.Players;
 
 import java.io.Serializable;
 

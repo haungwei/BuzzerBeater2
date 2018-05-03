@@ -12,15 +12,14 @@ import java.util.List;
  */
 
 @Entity
-@Table(name = "Season")
-public class Season implements Serializable {
+public class Seasons implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_season")
     @SequenceGenerator(name = "seq_season", sequenceName = "seq_season", allocationSize = 1)
     private Integer seasonId;
 
-    @OneToMany(mappedBy = "season", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "seasons")
     private List<Groups> groups;
 
     private String seasonName;
@@ -32,7 +31,7 @@ public class Season implements Serializable {
 
     @Override
     public String toString() {
-        return "Season{" +
+        return "Seasons{" +
                 "seasonId=" + seasonId +
                 ", groups=" + groups +
                 ", seasonName='" + seasonName + '\'' +

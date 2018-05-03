@@ -1,13 +1,10 @@
 package eeit97.buzzerbeater;
 
-import eeit97.buzzerbeater.jpa.entity.Season;
-import eeit97.buzzerbeater.jpa.repository.SeasonRepository;
+import eeit97.buzzerbeater.jpa.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
@@ -17,11 +14,10 @@ public class Application implements CommandLineRunner {
     }
 
     @Autowired
-    private SeasonRepository seasonRepository;
+    private PlayersGroupsRepository repository;
 
     @Override
     public void run(String... strings) throws Exception {
-        List<Season> seasonList = seasonRepository.findAll();
-        seasonList.forEach(season -> System.out.println(season.toString()));
+        repository.findAll().forEach((i) -> System.out.println(i.toString()));
     }
 }
