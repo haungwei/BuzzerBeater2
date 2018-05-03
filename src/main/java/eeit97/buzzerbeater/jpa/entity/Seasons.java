@@ -29,17 +29,67 @@ public class Seasons implements Serializable {
     private Timestamp registerEndDate;
     private String descriptions;
 
-    @Override
-    public String toString() {
-        return "Seasons{" +
-                "seasonId=" + seasonId +
-                ", groups=" + groups +
-                ", seasonName='" + seasonName + '\'' +
-                ", beginDate=" + beginDate +
-                ", endDate=" + endDate +
-                ", registerBeginDate=" + registerBeginDate +
-                ", registerEndDate=" + registerEndDate +
-                ", descriptions='" + descriptions + '\'' +
-                '}';
+    public Integer getSeasonId() {
+        return seasonId;
+    }
+
+    public void setSeasonId(Integer seasonId) {
+        this.seasonId = seasonId;
+    }
+
+    public List<Groups> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<Groups> groups) {
+        this.groups = groups;
+    }
+
+    public String getSeasonName() {
+        return seasonName;
+    }
+
+    public void setSeasonName(String seasonName) {
+        this.seasonName = seasonName;
+    }
+
+    public Date getBeginDate() {
+        return beginDate;
+    }
+
+    public void setBeginDate(Date beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public Timestamp getRegisterBeginDate() {
+        return registerBeginDate;
+    }
+
+    public void setRegisterBeginDate(Timestamp registerBeginDate) {
+        this.registerBeginDate = registerBeginDate;
+    }
+
+    public Timestamp getRegisterEndDate() {
+        return registerEndDate;
+    }
+
+    public void setRegisterEndDate(Timestamp registerEndDate) {
+        this.registerEndDate = registerEndDate;
+    }
+
+    public String getDescriptions() {
+        return descriptions;
+    }
+
+    public void setDescriptions(String descriptions) {
+        this.descriptions = descriptions;
     }
 }
